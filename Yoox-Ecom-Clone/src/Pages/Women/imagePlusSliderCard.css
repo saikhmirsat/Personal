@@ -1,0 +1,13 @@
+.women-imagePlusSliderCard{
+    background-color: white;
+    height: 500px;
+    
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-size: 12px;
+    
+}
+.women-imagePlusSliderCard img{
+    width: 260px;
+}

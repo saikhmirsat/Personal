@@ -1,0 +1,156 @@
+.women-product-container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* overflow: hidden; */
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 70%;
+    /* height: 500px; */
+    margin: auto;
+    /* background-color: white; */
+
+}
+.women-one-product-container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 70%;
+    /* height: 500px; */
+    margin: auto;
+    /* background-color: white; */
+}
+
+.women-product-slider{
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    /* border: 1px red solid; */
+    /* white-space: nowrap; */
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-right: 10px;
+    /* background-color: white; */
+}
+.women-one-product-slider{
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    /* border: 1px red solid; */
+    /* white-space: nowrap; */
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-right: 10px;
+    /* background-color: white; */
+}
+
+.women-prev-btn, .women-next-btn{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    /* top:30px; */
+    border: none;
+
+    
+}
+.women-one-prev-btn, .women-one-next-btn{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    /* top:30px; */
+    border: none;
+
+    
+}
+.women-prev-btn{
+    left:0;
+}
+.women-one-prev-btn{
+    left:0;
+}
+.women-next-btn{
+    right: 0;
+}
+.women-one-next-btn{
+    right: 0;
+}
+
+.women-prev-btn p, .women-next-btn p{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    
+}
+.women-one-prev-btn p, .women-one-next-btn p{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.women-next-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+}
+.women-one-next-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+}
+.women-prev-btn p{
+    right: 5px;
+    color: white;
+    font-size: 25px;
+}
+.women-one-prev-btn p{
+    right: 5px;
+    color: white;
+    font-size: 25px;
+}
+
+.women-new-arrival-heading{
+    margin-left: 0;
+    /* text-align: center; */
+    font-size: 24px;
+    letter-spacing:2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.women-view-all-heading{
+    /* margin-left: 650px; */
+    /* text-align: center; */
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.women-view-all-heading:hover{
+    color: gray;
+}
+
+.women-ONE-OF-A-KIND{
+    /* margin-left: 0 !important; */
+    text-align: center;
+    font-size: 24px;
+    letter-spacing:2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+}

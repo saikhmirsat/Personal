@@ -1,0 +1,131 @@
+.men-ImagePlusSlider-container{
+    /* border: 1px red solid; */
+    height: 600px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.men-image-plus-slider-container{
+    /* border: 1px red solid; */
+    height: 600px;
+    
+    
+}
+.men-image-container{
+    margin-left: 150px;
+    position: relative;
+    text-align: start;
+    
+}
+.men-image-container img{
+    width: 800px;
+    
+}
+.men-its-party-time{
+    margin-right: 950px;
+    margin-left: 10px;
+    width: 350px;
+    background-color: white;
+    position: relative;
+    top:-170px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 12px;
+
+}
+
+
+.men-its-party-time p{
+    color: gray;
+    font-size: 14px;
+}
+.men-its-party-time div{
+    /* margin-bottom: 10px; */
+    text-decoration: underline
+}
+
+.men-its-party-time span:hover{
+    color: grey;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.men-ImagePlusSlider-slider{
+    margin-left: 30px;
+    left: 800px;
+    bottom: 700px;
+    position: relative;
+    /* overflow: hidden; */
+    
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 23%;
+    /* height: 500px; */
+    /* margin: auto; */
+
+}
+.men-ImagePlusSlider-product-container{
+    /* position: relative; */
+    background-color: white;
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    /* margin-left: 200px; */
+    /* border: 1px red solid; */
+    /* white-space: nowrap; */
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-right: 10px;
+}
+/* .ImagePlusSlider-product-container img{
+    width: 100%;
+} */
+.ImagePlusSlider-slider p{
+    /* border: 1px red solid; */
+}
+.men-slider-next-btn,.men-slider-prev-btn{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    /* top:30px; */
+    border: none;
+    
+
+}
+
+.men-slider-prev-btn{
+    background-color: white;
+    left: 0;
+}
+.men-slider-next-btn{
+    right: 0;
+}
+
+.men-slider-next-btn p,.men-slider-prev-btn p{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    margin-top: 130px;
+}
+
+.men-slider-prev-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+    margin-left: 24px;
+    
+}
+.men-slider-next-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+}
+.men-discover-more{
+    margin-left: 50px;
+}

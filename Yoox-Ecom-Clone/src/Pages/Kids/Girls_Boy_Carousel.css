@@ -1,0 +1,163 @@
+.gb-product-container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* overflow: hidden; */
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 70%;
+    /* height: 500px; */
+    margin: auto;
+    /* background-color: white; */
+
+}
+.gb-one-product-container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 70%;
+    /* height: 500px; */
+    margin: auto;
+    /* background-color: white; */
+}
+
+.gb-product-slider{
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    /* border: 1px red solid; */
+    /* white-space: nowrap; */
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-right: 10px;
+    /* background-color: white; */
+}
+.gb-one-product-slider{
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    /* border: 1px red solid; */
+    /* white-space: nowrap; */
+    overflow:hidden;
+    scroll-behavior: smooth;
+    margin-right: 10px;
+    /* background-color: white; */
+}
+
+.gb-prev-btn, .gb-next-btn{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    /* top:30px; */
+    border: none;
+
+    
+}
+.gb-one-prev-btn, .gb-one-next-btn{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    /* top:30px; */
+    border: none;
+
+    
+}
+.gb-prev-btn{
+    left:0;
+}
+.gb-one-prev-btn{
+    left:0;
+}
+.gb-next-btn{
+    right: 0;
+}
+.gb-one-next-btn{
+    right: 0;
+}
+
+.gb-prev-btn p, .gb-next-btn p{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    
+}
+.gb-one-prev-btn p, .gb-one-next-btn p{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.gb-next-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+}
+.gb-one-next-btn p{
+    right: 40px;
+    color: white;
+    font-size: 25px;
+}
+.gb-prev-btn p{
+    right: 5px;
+    color: white;
+    font-size: 25px;
+}
+.gb-one-prev-btn p{
+    right: 5px;
+    color: white;
+    font-size: 25px;
+}
+
+.gb-new-arrival-heading{
+    margin-left: 0;
+    /* text-align: center; */
+    font-size: 24px;
+    letter-spacing:2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.gb-view-all-heading{
+    /* margin-left: 650px; */
+    /* text-align: center; */
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.gb-view-all-heading:hover{
+    color: gray;
+}
+
+.gb-ONE-OF-A-KIND{
+    /* margin-left: 0 !important; */
+    text-align: center;
+    font-size: 24px;
+    letter-spacing:2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+}
+
+#ujju{
+    color: black;
+}
+#ujju:hover{
+    color: grey;
+}
