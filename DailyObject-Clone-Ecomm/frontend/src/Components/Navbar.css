@@ -1,0 +1,152 @@
+.navbar {
+
+	/* height: 50px; */
+	display: flex;
+	align-items: center;
+	padding: 5px 20px;
+}
+
+.normal-navbar {
+
+	width: 100%;
+}
+
+.Hamburger-box {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.navbar {
+		padding: unset;
+	}
+
+	.normal-navbar {
+		display: none;
+	}
+
+	.Hamburger-box {
+		display: flex;
+		width: 100%;
+	}
+
+	.hamburger-nav {
+		/* border: 1px solid red; */
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid rgb(191, 190, 190);
+		padding: 10px 15px;
+	}
+
+	.Hamburger-box .hamburger-log {
+		width: 15%;
+	}
+
+	
+		
+	
+
+	.hamburger-catagories-box {
+		border: 1px solid rgb(229, 228, 228);
+		display: grid;
+		grid-template-columns: repeat(3, 20% 70% 5%);
+		gap: 10px;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	.hamburger-catagories-box>img {
+		width: 90%;
+	}
+
+	.hamburger-catagories-brand {
+		border: 1px solid rgb(209, 207, 207);
+		height: 70px;
+		margin-bottom: -15px;
+		width: 100%;
+		background-color: rgb(222, 221, 221);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.hamburger-catagories-release {
+		border: 1px solid rgb(209, 207, 207);
+		background-color: rgb(222, 221, 221);
+		width: 100%;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+	}
+
+}
+
+@media (max-width: 667px) {
+	.navbar {
+		padding: unset;
+	}
+
+	.normal-navbar {
+		display: none;
+	}
+
+	.Hamburger-box {
+		display: flex;
+		width: 100%;
+	}
+
+	.hamburger-nav {
+		/* border: 1px solid red; */
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid rgb(191, 190, 190);
+		padding: 10px 15px;
+	}
+
+	.Hamburger-box .hamburger-log {
+		width: 20%;
+	}
+
+	
+	.hamburger-catagories-box {
+		border: 1px solid rgb(229, 228, 228);
+		display: grid;
+		grid-template-columns: repeat(3, 20% 70% 5%);
+		gap: 10px;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	.hamburger-catagories-box>img {
+		width: 90%;
+	}
+
+	.hamburger-catagories-brand {
+		border: 1px solid rgb(209, 207, 207);
+		height: 70px;
+		margin-bottom: -15px;
+		width: 100%;
+		background-color: rgb(222, 221, 221);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.hamburger-catagories-release {
+		border: 1px solid rgb(209, 207, 207);
+		background-color: rgb(222, 221, 221);
+		width: 100%;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+	}
+}
