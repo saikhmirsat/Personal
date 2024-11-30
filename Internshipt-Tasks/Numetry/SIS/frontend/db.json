@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Languages": [
+    {
+      "subjectName": "English",
+      "languageType": "Hindi",
+      "sequenceNumber": 0,
+      "numberOfCredits": 0,
+      "id": 1
+    },
+    {
+      "subjectName": "Math",
+      "languageType": "english",
+      "sequenceNumber": 0,
+      "numberOfCredits": 0,
+      "id": 2
+    }
+  ],
+  "General": [
+    {
+      "subjectName": "Hindi",
+      "sequenceNumber": 1,
+      "numberOfCredits": "3",
+      "id": 3
+    },
+    {
+      "subjectName": "English",
+      "sequenceNumber": 2,
+      "numberOfCredits": "0",
+      "id": 4
+    },
+    {
+      "subjectName": "Hindi",
+      "sequenceNumber": 0,
+      "numberOfCredits": null,
+      "id": 5
+    }
+  ],
+  "Optional": [
+    {
+      "subjectName": "Hindi",
+      "sequenceNumber": 1,
+      "optional": "Elective-1",
+      "numberOfCredits": "2",
+      "id": 1
+    }
+  ],
+  "Religius": [
+    {
+      "subjectName": "English",
+      "sequenceNumber": "7",
+      "numberOfCredits": 2,
+      "id": 1
+    },
+    {
+      "subjectName": "Math",
+      "sequenceNumber": "3",
+      "numberOfCredits": "7",
+      "id": 2
+    }
+  ]
+}
