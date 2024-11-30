@@ -1,0 +1,64 @@
+.profile-update-main-con {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    border: 2px solid #5271FF;
+    display: grid;
+    grid-template-columns: repeat(2, 30% 65%);
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.profile-update-image-div {
+    border: 3px solid #5271FF;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.profile-update-main-con img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-update-main-con label {
+    float: left;
+}
+
+.profile-update-main-con input,
+select {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+}
+
+.profile-update-main-con button {
+    background-color: #5271FF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+}
+
+@media (max-width:1024px) {
+    .profile-update-main-con {
+        width: 95%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:667px) {
+    .profile-update-main-con {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 10px;
+    }
+
+    .profile-update-image-div {
+        height: 90%;
+    }
+}

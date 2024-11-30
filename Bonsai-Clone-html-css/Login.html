@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Icon" type="image" href="https://i.ibb.co/pnnyM2D/Icon.jpg">
+    <title>Log In - Bonsai</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: white;
+      font-family: "Proximanova opt", sans-serif;
+    }
+    .navbar {
+      /* border: 1px solid red; */
+      border-bottom: 1px solid #d3cece;
+      height: 80px;
+      width: 100%;
+      padding: 12px 1% 12px 1%;
+      background-color: white;
+      display: flex;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo > a > img {
+      width: 32px;
+      /* border: 1px solid rgb(21, 0, 255); */
+    }
+
+    .login {
+      /* border: 1px solid olivedrab; */
+      display: inline-flex;
+      align-items: center;
+      margin-left: 87%;
+      gap: 18px;
+    }
+    .login a {
+      margin-left: 3px;
+      text-decoration: none;
+      /* padding: 12px 27px 9px; */
+      color: #6d6d6d;
+    }
+    #container {
+      /* border: 1px solid red; */
+      height: auto;
+      width: 65%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 37% 50%);
+      gap: 13%;
+      margin-top: 100px;
+    }
+    #container > div {
+      /* border: 1px solid blue; */
+    }
+    #child-1 {
+      height: 76%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #child-2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0px 50px 0px;
+      box-shadow: 0 2px 15px rgb(2 4 69 / 5%);
+    }
+    #child-2-inner-box {
+      /* border: 1px solid red; */
+      width: 80%;
+      height: auto;
+    }
+    #child-2-inner-box > div {
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #292a2d;
+      font-size: 26px;
+      text-align: center;
+    }
+    #child-2-inner-box > a {
+      text-decoration: none;
+      display: flex;
+      border: 1px solid #ddd;
+      text-align: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 11px;
+      border-radius: 4px;
+      line-height: 1em;
+      color: #666;
+    }
+    #child-2-inner-box > a > img {
+      width: 20px;
+    }
+    #child-2-inner-box > a:hover {
+      border: 1px solid #00b289;
+    }
+    #line {
+      border-bottom: 1px solid rgb(245, 243, 243);
+      margin-top: 28px;
+      margin-bottom: 0px;
+    }
+    #line-p > p {
+      position: absolute;
+      top: 367px;
+      left: 65%;
+      background-color: white;
+      padding: 2px 10px;
+      font-size: 13px;
+      color: rgb(179, 175, 175);
+    }
+    .email-pass {
+      height: 40px;
+      width: 100%;
+      padding: 10px 10px 9px;
+      font-size: 16px;
+      color: #292a2d;
+      background: #fff;
+      border: 1px solid #ccd0d2;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .email-pass:hover {
+      border: 1px solid #00b289;
+    }
+    #check-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    #check-box > div {
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      background-color: #00b289;
+      border: 0px;
+      border-radius: 5px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #01c496;
+      cursor: pointer;
+    }
+    #reset-pass > a {
+      text-decoration: none;
+      color: #00b289;
+      font-size: 16px;
+    }
+    #reset-pass {
+      margin-top: 25px;
+    }
+    #child-1-nav {
+      /* background-color: rgb(225, 34, 34); */
+      text-align: center;
+      font-weight: 700;
+      height: 50px;
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid gray;
+      width: 94%;
+      margin: auto;
+    }
+    #child-1-nav > div {
+      padding: 0px 0px 10px 0px;
+    }
+    #scroll-bar > div > a {
+      text-decoration: none;
+    }
+    .improvement {
+      background-color: #c1f3e8;
+      font-size: 11px;
+      line-height: 18px;
+      display: inline-block;
+      padding: 0 11px;
+      font-weight: 400;
+      border-radius: 20px;
+      margin-right: 3px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .bold {
+      color: #292a2d;
+      line-height: 19px;
+      font-weight: normal;
+      font-size: 15px;
+      display: inline-block;
+      font-weight: 500;
+    }
+    .p {
+      color: #666;
+      line-height: 19px;
+      font-size: 13px;
+    }
+    .para-box {
+      margin-bottom: 10px;
+    }
+    .green {
+      background-color: #01c496;
+      font-size: 12px;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 10px;
+    }
+    #bonsai {
+      background-color: #0c3d31;
+      font-size: 11px;
+      line-height: 18px;
+      display: inline-block;
+      padding: 0 11px;
+      font-weight: 400;
+      border-radius: 20px;
+      color: white;
+    }
+    #child-1-box {
+      /* border: 1px solid brown; */
+      margin: 10px 10px;
+    }
+    .bold:hover {
+      text-decoration: underline;
+    }
+    #footer-bar {
+      /* border: 1px solid red; */
+      height: 30px;
+      background-color: white;
+      color: #a8a8a8;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid rgb(229, 225, 225);
+    }
+    #footer-bar > a {
+      text-decoration: none;
+      color: #a8a8a8;
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    #footer-1 {
+      /* border: 1px solid red; */
+      height: auto;
+      width: 40%;
+      margin: auto;
+      margin-top: 200px;
+    }
+    #footer-1 > ul > li > a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    #footer-1 > ul {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+    }
+    #footer-1 > ul > li:nth-child(1) {
+      list-style: none;
+    }
+    #footer-2 {
+      /* border: 1px solid red; */
+      height: auto;
+      width: 60%;
+      margin: auto;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ccd0d2;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 100px;
+    }
+    #footer-2 > div > span > a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ccd0d2;
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="Index.html"
+          ><img
+            src="https://app.hellobonsai.com/assets/logo-icon@2x-26e51659aa6b5e2558bc095b689ed7b086008fbea51e3aea30245a97360f42a4.png"
+            alt=""
+          />
+        </a>
+      </div>
+
+      <div class="login">
+        <a href="Login.html">Login</a>
+        <a href="SigupPage.html">Sign up</a>
+      </div>
+    </div>
+
+    <!-- END NAVBAR -->
+
+    <div id="container">
+      <div id="child-1">
+        <div id="child-1-nav">
+          <div>The Chengelog</div>
+        </div>
+        <div id="child-1-box">
+          <div id="scroll-bar">
+            <div class="para-box">
+              <a href="#" .>
+                <span class="improvement">Improvement</span>
+                <span class="bold">New setting page.</span>
+                <span class="p">
+                  The settings page now has sections on the left so you get
+                  quicker to where you need, and get a...
+                </span>
+              </a>
+            </div>
+
+            <div class="para-box">
+              <a href="#">
+                <span class="green">New</span>
+                <span class="bold">Request upfront deposits on your </span>
+                <span class="bold">proposals (US only)</span>
+                <span class="p">
+                  Secure your work at the start of every project by requiring a
+                  deposit on your proposal. In just...
+                </span>
+              </a>
+            </div>
+
+            <div class="para-box">
+              <a href="#">
+                <span class="green">New</span>
+                <span class="bold">
+                  Use your email address for notifications
+                </span>
+                <span class="bold">sent to your clients from Bonsai.</span>
+                <span class="p">
+                  Set your next proposal, contract or invoice to be sent from
+                  your business email, instead of from...
+                </span>
+              </a>
+            </div>
+
+            <div class="para-box">
+              <a href="#" .>
+                <span class="improvement">Improvement</span>
+                <span class="bold">Look like a pro with your custom </span>
+                <span class="bold"> brand.</span>
+                <span class="p">
+                  Add your custom brand to all your future invoices and
+                  contracts. Look professional with every...
+                </span>
+              </a>
+            </div>
+            <div class="para-box">
+              <a href="#" .>
+                <span class="improvement">Improvement</span>
+                <span id="bonsai">Bonsai Cash</span>
+                <span class="bold">Bonsai Cash </span>
+                <span class="bold"> dashboard improvements.</span>
+                <span class="p">
+                  Add your custom brand to all your future invoices and
+                  contracts. Look professional with every...
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="footer-bar">
+          <a href="#">Bonsai updates </a>
+          <span> powered by</span>
+          <a href="#"> Headway</a>
+        </div>
+      </div>
+
+      <div id="child-2">
+        <div id="child-2-inner-box">
+          <div>Sign In</div>
+
+          <a
+            href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&client_id=501424643674-nanitcu737p7spn5c1k4u2md9hbprkht.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https%3A%2F%2Fapp.hellobonsai.com%2Fusers%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20profile&state=JTdCJTIyc2lnbnVwX29yaWdpbiUyMiUzQSUyMnNpZ24lMjBpbiUyMHBhZ2UlMjIlMkMlMjJkaXN0aW5jdF9pZCUyMiUzQSUyMjc4MDJjMWI2LTM4ZmEtNDk2Yi04NjI2LWVlMzU1Nzk2MmE5NSUyMiUyQyUyMnJlZmVycmVyJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZ3d3cuaGVsbG9ib25zYWkuY29tJTJGJTIyJTJDJTIyc2lnbl91cF91cmwlMjIlM0ElMjJodHRwcyUzQSUyRiUyRmFwcC5oZWxsb2JvbnNhaS5jb20lMkZ1c2VycyUyRnNpZ25faW4lMjIlMkMlMjJjb3VudHJ5JTIyJTNBJTIySU4lMjIlMkMlMjJjdXJyZW5jeSUyMiUzQSUyMklOUiUyMiU3RA%3D%3D&flowName=GeneralOAuthFlow"
+          >
+            <img
+              src="https://pngimg.com/uploads/google/google_PNG19635.png"
+              alt=""
+            />
+            <p>Sign In with Google</p>
+          </a>
+          <div id="line-p">
+            <div id="line"></div>
+            <p>or</p>
+          </div>
+
+          <!-- input -->
+          <input class="email-pass" type="text" placeholder="Email" />
+          <input class="email-pass" type="text" placeholder="Password" />
+          <div id="check-box">
+            <input type="checkbox" />
+            <div>Remember me</div>
+          </div>
+
+          <button>Log in</button>
+
+          <div id="reset-pass">
+            <a href="#">Reset Password</a><br />
+            <a href="#">Resend Verification Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div id="footer-1">
+      <ul>
+        <li><a href="#">Contact Us </a></li>
+        <li><a href="#"> Help Center </a></li>
+        <li><a href="about.html"> About Us </a></li>
+        <li><a href="#"> Plans & Pricing </a></li>
+        <li><a href="#"> Privacy policy</a></li>
+      </ul>
+    </div>
+
+    <div id="footer-2">
+      <div>
+        ©2022 Bonsai Technologies Inc — Payments, banking, and issuing services
+        are provided by <span><a href="#">Stripe Payments Company</a></span
+        >, Evolve Bank & Trust (Member FDIC), and Celtic Bank (Member FDIC),
+        respectively. Bonsai is not a law firm, and does not provide legal
+        services, advice, or representation. &nbsp; &nbsp;
+        <span><a href="#">Term</a></span> &nbsp; &nbsp;<span
+          ><a href="#">Creadits</a></span
+        >
+      </div>
+    </div>
+  </body>
+</html>

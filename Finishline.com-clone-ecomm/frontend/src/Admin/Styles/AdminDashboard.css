@@ -1,0 +1,32 @@
+#admin-main-container {
+    /* border: 1px solid red; */
+}
+
+/* #admin-main-container .chakra-tabs__tab {
+    border: 1px solid green;
+    background-color: aqua;
+} */
+
+#admin-main-container .css-edw2yw[aria-selected=true] {
+    background-color: #5271FF;
+    color: white;
+    font-weight: bolder;
+}
+
+/* #admin-main-container div.chakra-tabs__tablist.css-19b7sqg {
+    border: 1px solid red;
+
+} */
+
+@media (max-width:667px) {
+    #admin-main-container div.chakra-tabs__tablist.css-19b7sqg {
+        /* border: 1px solid red; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 26% 23% 13% 38%);
+    }
+
+    #admin-main-container .css-edw2yw[aria-selected=true] {
+        font-weight: normal;
+    }
+}

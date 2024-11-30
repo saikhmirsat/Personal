@@ -1,0 +1,123 @@
+.register_container {
+  border: 2px solid grey;
+  width: 40%;
+  margin: auto;
+}
+.can_rec_btn_div {
+  display: flex;
+}
+.can_rec_btn_div > button {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 18px;
+  padding: 5px;
+  background-color: unset;
+}
+.hide_inputs_rec_can {
+  display: none;
+}
+
+.recruter_input {
+  display: contents;
+}
+.candidate_input {
+  display: contents;
+}
+.register_container .btn_bg_clr {
+  background-color: #1662f1;
+  color: white;
+}
+
+.input_box_con {
+  /* border: 1px solid red; */
+  margin: 30px;
+}
+.input_box_con input {
+  width: 97%;
+  margin-bottom: 15px;
+  height: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.password_div_con {
+  display: flex;
+  border: 1px solid grey;
+  height: 24px;
+  padding-right: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.password_div_con input {
+  border: none;
+  outline: none;
+}
+
+.submit_btn {
+  background-color: #1662f1;
+  border: none;
+  padding: 6px 30px;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+}
+.submit_btn:hover {
+  background-color: #0b52d5;
+}
+
+#passwordRules {
+  margin-top: 20px;
+  border: 1px solid white;
+  padding-left: 10px;
+  text-align: left;
+  background-color: #1663f133;
+}
+#passwordRules > p {
+  display: flex;
+  gap: 10px;
+}
+
+.Note_cont {
+  width: 30%;
+  margin: auto;
+  background-color: rgb(220, 245, 242);
+  padding: 50px;
+}
+.Input_forget_pass {
+  border: 1px solid grey;
+  padding: 40px;
+  width: 30%;
+  margin: auto;
+}
+.Input_forget_pass > input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 30px;
+}
+.Input_forget_pass button {
+  background-color: #0b52d5;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 667px) {
+  .register_container {
+    width: 90%;
+  }
+  .Input_forget_pass {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .Note_cont {
+    width: 95%;
+    margin-left: 5%;
+    padding: 50px 10px;
+  }
+}

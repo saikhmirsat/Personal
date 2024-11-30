@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="image" href="https://i.ibb.co/pnnyM2D/Icon.jpg">
+    <title>Bonsai Reviews - Trusted by 150,000+ Freelancers</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        color: #4c525a;
+        font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+    background-color: #fff;
+    }
+     .navbar{
+        /* border: 1px solid red; */
+        height: 70px;
+        width: 100%;
+        padding: 12px 9% 12px 9%;
+        background-color: white;
+        display: flex;
+        position: fixed;
+        /* z-index: 5; */
+        
+
+    
+    }
+    .logo{
+        /* border: 1px solid rgb(21, 0, 255); */
+        width: 152px;
+        height: 60px;
+        /* margin-top: 12px; */
+        /* margin-bottom: 12px; */
+        display: flex;
+        align-items: center;
+        
+    }
+    .logo>a>img{
+        width: 100%;
+        /* border: 1px solid rgb(21, 0, 255); */
+    }
+    .mid-item{
+        /* border: 1px solid darkblue; */
+        display: flex;
+        align-items: center;
+        margin-left: 16%;
+    }
+    .mid-item ul{
+        display: inline-flex;
+        list-style: none;
+    }
+    .mid-item ul li{
+        width: auto;
+        margin-right: 30px;
+        /* border: 1px solid lawngreen; */
+        font-size: 17px;
+        width: 93px;
+        
+    }
+    .mid-item ul li a{
+        text-decoration: none;
+        color: #4c4d5f;
+    }
+    .login{
+        /* border: 1px solid olivedrab; */
+        display: inline-flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .login a{
+        margin-left: 15px;
+        text-decoration: none;
+        padding: 12px 27px 9px;
+        border: 1px solid #00b289;
+        border-radius: 4px;
+        color: rgb(12, 2, 2);
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: .6px;
+        padding-right: 22px;
+        padding-left: 22px;
+        
+    }
+    .login>a:nth-child(1){
+        color:#00b289;
+        border: 1px solid #00b289;
+    }
+    .login>a:nth-child(2){
+        color:#f9fbfb;
+        background-color: #00b289;
+        width: 90px;
+    }
+    .login>a:nth-child(1):hover{
+        background-color: #00b289;
+        color: white;
+    }
+    .login>a:nth-child(2):hover{
+        background-color: #04906f;
+        color: white;
+    }
+    .down-arr{
+        width: 10px;
+    }
+    #heading-container{
+        border: 1px solid #fff;
+        height: 390px;
+        width: 34%;
+        margin: auto;
+       /* bottom: -200px; */
+    }
+    #heading{
+        margin-top: 250px;
+        font-family: 'Amerigo-bt roman opt';
+        font-weight: 400;
+        color: #4c525a;
+    font-size: 40px;
+    text-align: center;
+    }
+    #mid-head{
+        color: #4c525a;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin-top: 10px;
+    }
+    #heading-container>p{
+     text-align: center;
+    }
+    .image-container{
+        /* border: 1px solid red; */
+        /* height: auto; */
+        width: 95%; 
+        margin: auto;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    
+    .image-container>div{
+      /* border:1px solid #00b289; */
+        
+    }
+    .image-container>div>img{
+        width: 25%;
+        height: 200px;
+        border-top-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+        
+    }
+    .image-container>div>img:nth-child(2){
+        width: 40%;
+    }
+    .image-container>div>img:last-child{
+        width: 50px;
+        margin-left: 30px;
+        position: absolute;
+        margin-top: 80px;
+    }
+    #container{
+        /* border: 1px solid red; */
+        height: auto;
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(15,auto);
+        gap: 20px;
+        position: relative;
+    bottom: 110px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+
+    }
+    #container>div{
+        /* border: 1px solid rgb(0, 255, 191); */
+        
+        z-index: -1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+    }
+   
+    .para{
+        font-size: 22px;
+    line-height: 1.4;
+    margin-top: 20px;
+    }
+    .name{
+        color: #4c525a;
+        font-size: 1.25rem;
+    line-height: 140%;
+    font-weight: 600;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    }
+    .position{
+        opacity: .75;
+        font-size: 1.25rem;
+    line-height: 140%;
+    margin-top: 5px;
+    padding-bottom:50px ;
+    }
+    .inner-box{
+        margin-right: 30px;
+    margin-left: 36px;
+    padding-top: 115px;
+    /* padding-bottom: 74px; */
+    }
+    .name:nth-child(1){
+        padding-bottom: 0px;
+    }
+    .name:nth-child(2){
+        padding-bottom: 0px;
+    }
+
+    .footer{
+    /* border: 1px solid red; */
+    height: 650px;
+    width: 70%;
+    margin: auto;
+    /* margin-top: 598%; */
+    display: grid;
+    grid-template-columns: repeat(3,39% 40% 27%);
+    margin-bottom: 120px;
+    font-family: 'Proximanova opt',sans-serif;
+}
+
+.footer-heading{
+    margin-bottom: 40px;
+    color: #4c4d5f;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: .12px;
+}
+.footer-link>a{
+    text-decoration: none;
+    margin-bottom: 1px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+}
+#fot-link>a{
+    text-decoration: none;
+    color: #696a7c;
+}
+#fot-link{
+    margin-top: 30px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 320;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid>a{
+text-decoration: none;
+display: block;
+color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#templates{
+ margin-bottom: 20px;
+}
+
+.link-summarry{
+    text-decoration: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+    margin-left: 30px;
+    
+}
+.footer-link>img{
+   width: 16px;
+   border: 0;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+   
+   
+}
+.footer-link{
+    list-style: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    cursor: pointer;
+}
+#invoice-temolates{
+    margin-top: 30px;
+}
+    
+    
+
+</style>
+<body>
+     <!-- Nav BAR -->
+     <div class="navbar">
+        <div class="logo">
+            <a href="Index.html"><img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt=""></a>
+        </div>
+        
+        <div class="mid-item">
+            <ul>
+                <li><a href="#">Product <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+                <li><a href="#">Templates <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+                <li><a href="PricingPage.html">Pricing</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </div>
+        
+        <div class="login">
+            <a href="Login.html">LOGIN</a>
+            <a href="SigupPage.html">START FREE</a>
+        </div>
+        
+    </div>
+
+    <!-- END NAVBAR -->
+
+    <div id="heading-container">
+       <div id="heading">Bonsai Reviews</div>
+       <div id="mid-head">200,000+ Freelancers Love Bonsai. Here's why.</div>
+       <p>Last Updated April 21,2021</p>
+    </div>
+
+    <div class="image-container">
+         <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e9ef0355118204b690a5297_KevinT_0096rt1.jpg" alt="">
+            <img class="img-qt" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+        </div>
+        
+        <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e9ef23d8229a8676579c19f_JasonCuray.jpg" alt="">
+            <img class="img-qt" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+          
+
+        </div>
+  </div>
+
+
+  <div id="container">
+    <div>
+        <div class="inner-box">
+            <p class="para">
+                "I did a lot of research before switching to Bonsai from another invoicing service. The ability to send and sign contracts was a game changer for me. No one else offers such a seamless process from proposal to contract to invoice. It has saved me a lot of time and lets me focus on creative work."
+            </p>
+            <div class="name">
+                Kevin Tudball
+            </div>
+            <div class="position">
+                Illustrator
+            </div>
+    </div>
+    </div>
+
+
+    <div>
+        <div class="inner-box">
+            <p class="para">
+                "My #1 most used and favourite feature is the contracts, it has everything that I need, easy to customise and it automates invoice creation which saves me time. <br> 
+                <br>Bonsai is an efficient, effective, affordable, easy to use and empowering tool that allows me to do more important tasks."
+            </p>
+            <div class="name">
+                Jason Curay
+            </div>
+            <div class="position">
+                Digital Marketer
+            </div>
+    </div>
+    </div>
+
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I've been a Bonsai user for years. It has allowed me to grow my career as a fulltime freelancer especially with the ease of making contracts and collecting payments. With a variety of clients that are all on different payment schedules, Bonsai provided options for each client without difficulty. Now I am enjoying Bonsai even more that they have added the additional accounting and tax assistance. This quarter I was able to save so much more time filing quarterly tax payments thanks to the tax assistance feature. Thanks, Bonsai for understanding what freelancers need at every stage of their freelance career."
+             </p>
+            <div class="name">
+                Diane Serra
+            </div>
+    </div>
+    </div>
+
+    <!-- END -->
+
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai has been absolutely essential in taking my freelance work from an amateur side-gig to a full-time business. It pays for itself 2x over in the time I save having everything so seamlessly integrated. I love how I'm able to send professional-looking invoices, track billable and non-billable hours, create to-do lists, track finances/expenses, and even create contracts and proposals all in one place. The integration with Google Calendar is a huge plus, the customer service is beyond stellar, the platform is really intuitive and easy to use... Really can't say enough good things about it."
+            </p>
+            <div class="name">
+                Danica Mitchell
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "We started a new venture to provide digital services to small businesses. Bonsai helped fast track our operations right away. We built upon contract and proposal templates and were able to streamline our operations, as if we were already operating for years. Our clients have all been very impressed with our operations, and we owe a lot of that satisfaction to Bonsai. Thanks! A+ from the Promethean team."
+            </p>
+            <div class="name">
+                Alexander Exarchou 
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is the best way to consolidate the “other” side of being in business as a freelancer or independent operator. That is what I love about it; proposals, contracts, invoices - all managed under the same umbrella. This alone has provided a great and streamlined experience for my clients. Bonsai is my armor to get what I’m worth. How I benefit most from Bonsai is having a reliable system to scale the pieces required in order to sustain my practice :)"
+            </p>
+            <div class="name">
+                Taylor Good
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I love the Bonsai app! It has been a game charger for my web consulting business. From the moment I started using it I was hooked because everything is easy to use and just makes sense, and I love that invoices are easily automated with a click of a button. Highly recommend! 10 out of 10!"
+            </p>
+            <div class="name">
+                Siska Hines
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai has been a complete game changer in the freelance world. I love how automated the product is, allowing me to spend more time designing and less time on mundane tasks."
+            </p>
+            <div class="name">
+                Julie West
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "The great thing about Bonsai is that there is not one feature that stands out but how everything is tied together in a super intuitive way. If you want to call that a feature, than that is it. Bonsai is a Swiss Army knife for every freelancer and makes me look good. Invoices, proposals, etc they all provide the same level of professionalism I already offer my client."
+            </p>
+            <div class="name">
+                Roland van den Hout
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is a huge help in my freelance writing business. It's robust with features while still being user friendly. I couldn't stay organized and on-track without it!"
+            </p>
+            <div class="name">
+                Elizabeth Bienas
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai takes all the stress out of running a business. It helps me look professional, does all the hard work, and lets me focus on the aspects of my business that I love. Thanks, Bonsai!"
+
+            </p>
+            <div class="name">
+                Hannah Walker   
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Using Bonsai has been the single best decision I made in streamlining my freelance business. I’ve been able to better manage proposals and contracts, and with the ability to have clients cover payment processing fees, my profits have increased. Bonsai has been a big win!"
+
+            </p>
+            <div class="name">
+                Ash Blankenship
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is one of my favorite tools for managing my business. I can send my clients proposals, contracts, and invoices all in one tool. Plus I use it to track time for hourly projects. Takes the headache out of managing my business & clients!"
+            </p>
+            <div class="name">
+                Lara Jordan  
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                Bonsai is the freelancer's Swiss Army knife! Everything I need for managing my clients is right at my fingertips.
+            </p>
+            <div class="name">
+                Nancy Little
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I found Bonsai the moment I needed a tool to submit a proposal to a client. The app has tracked entire projects from proposal to contract and invoicing, and I can't imagine running my business without it."
+
+            </p>
+            <div class="name">
+                Tawny Barbarick 
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is the best service for freelancers. The legal finesse of contracts is pretty rad & has saved me in sticky client situations. Automatic invoicing and invoicing follow-up messages/reminders are just awesome. I don't have the patience for that but I also like to get paid."
+            </p>
+            <div class="name">
+                Becca McCarty
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I use Bonsai in my copywriting business every day. It's an excellent, straightforward, and user-friendly hub for my proposals, contracts, and invoicing, and my clients really seem to enjoy the portal that keeps track of tasks and hours worked. The team is so easy to work with and are quick to answer questions and implement suggestions. I recommend Bonsai to everyone who asks!"
+            </p>
+            <div class="name">
+                Maggie Tyson 
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai has been a game changer for my small business. Being able to send proposals, contracts, and invoices all in the same system is a life saver!! There's no way I could have created and organized all of those documents without losing my sanity or letting something fall through the cracks. Thank you Bonsai!"
+
+            </p>
+            <div class="name">
+                Alix Kalfin  
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "As a freelancer, I was recently burned by a client who refused to pay me for two months of very hard work done. After having to hire an attorney, I realized I needed a way to have stronger contracts with my clients. Bonsai helped me with that and so much more. Bonsai is my new favorite platform to help make my life easier: resourceful, easy to understand, aids in organization, and provides some protection for myself and my clients."
+
+            </p>
+            <div class="name">
+                Caitlin Davis 
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Being self-employed is incredibly difficult, but Bonsai took the guesswork out of managing proposals, contracts, and invoicing.  I have saved countless hours using Bonsai and I would recommend it to any freelancer looking to simplify their workflows and focus more time and energy where you need it most, on your customers."
+
+            </p>
+            <div class="name">
+                Matthew Dunn  
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is smart, simple and secure! It's amazing how much less you have to worry about boring (but important) paperwork and you get to focus on the actual project, especially for young freelancers with less experience."
+            </p>
+            <div class="name">
+                Uchechukwu Onyeka
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I'm not sure what I did before Bonsai. It already does so much and the Bonsai team is always adding new features to make it even more useful. Sending proposals, writing contracts, and creating invoices has never been easier. It's totally worth the monthly fee for the peace of mind it provides."
+            </p>
+            <div class="name">
+                Elizabeth Jones        
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I adore Bonsai for its aesthetics, customization and flow. It’s so design conscious, responsive, clean, intuitive and I love that I now have the ability to send beautiful invoices that really reflect my brand. Unlike some of the clunky accounting tools I’ve used in the past. Plus it’s so easy to use. Clients often comment: LOVE IT!! Thank you."
+
+            </p>
+            <div class="name">
+                Louise O'Kane        
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Bonsai is my favorite tool for my freelance business. It allows me to stay organized with projects and invoices, and Bonsai is always coming out with new features to make their tools even easier to use."
+            </p>
+            <div class="name">
+                Karlie Jones
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I love using Bonsai, specifically for contracts. There's no printing, scanning and illegible handwriting. Just a smooth process that allows me to get started on a project sooner rather than later and makes me look professional to my clients. I can create my own or use the templates that have already been created, which has saved me so much time and hassle."
+            </p>
+            <div class="name">
+                Claire Brooks
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "I'm new to freelancing and Bonsai has made the transition so much easier. It made me and my biz more professional instantly."
+            </p>
+            <div class="name">
+                Amanda Larson
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Speaking of @bonsaiinc , I need to take a minute and say how pleased I am with them! I briefly debated leaving them for another provider, but promptly returned. Bonsaii makes creating proposals, contracts, time tracking, and invoices a breeze!"
+            </p>
+            <div class="name">
+                Cheril Clarke
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "The folks at @bonsaiinc just made my day. They're definitely committed to #freelancers - even during these crazy, challenging times. Amazing is what I have to say about the company and their service! Check them out!"
+            </p>
+            <div class="name">
+                Katie Schenk     
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Really glad I made the switch @bonsaiinc about a year ago. They are ON these features and updates, you hear me?!?!"
+            </p>
+            <div class="name">
+                Ariana Farquharson   
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+    <div>
+        <div class="inner-box">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c29a9feb660_quote-icon.svg" alt="">
+            <p class="para">
+                "Just wanted to give a shoutout to Matt and the team at @bonsaiinc for the best customer service (more specifically, from a CEO) that I’ve had in a long time. I will be upgrading my plan for sure post-pandemic. Bravo"
+            </p>
+            <div class="name">
+                Helena Lowe    
+            </div>
+    </div>
+    </div>
+    
+    <!-- END -->
+
+
+
+</div><!--container Last-div -->
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-child">
+        <div class="footer-heading">PRODUCT</div>
+        <div class="footer-link">
+            <a href="#">Proposals</a>
+            <a href="#">Contracts</a>
+            <a href="#">Invoicing</a>
+            <a href="#">Client CRM</a>
+            <a href="#">Time Tracking</a>
+            <a href="#">Task Tracking</a>
+            <a href="#">Forms</a>
+            <a href="#">Accounting</a>
+            <a href="#">Bonsai Tax</a>
+            <a href="#">Bonsai Cash</a>
+            <div id="fot-link">
+                <a href="#">Pricing</a>
+            </div>
+            <a href="#">Bonsai Reviews</a>
+        </div>
+    </div>
+
+
+    <div class="footer-child">
+
+        <div class="footer-heading">FREE RESOURCES</div>
+        <div class="footer-link">
+            <a href="#">Freelance Resources</a>
+            <a href="#">Freelance Blog by Bonsai</a>
+            <a href="#">How to Write a Contract</a>
+            <a href="#">Online Signature Maker</a>
+
+            <div id="footer-child-2-mid"</div>
+                <a href="#"> Self-Employed Taxes Hub</a>
+                <a href="#"> Self-Employed Tax Calculator</a>
+                <a href="#">Self-Employed Tax Deductions</a>
+            </div>
+
+         <div class="footer-heading" id="templates"</div>Templates</div>
+         <details>
+            <summary class="footer-link" >
+                Invoice Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div >
+                <a class="link-summarry" href="#">Invoice Generator</a>
+                <a class="link-summarry"  href="#">Blank Invoice Template</a>
+                <a class="link-summarry"  href="#">Consultant Invoice Template</a>
+                <a class="link-summarry"  href="#">Editable Invoice Template</a>
+                <a class="link-summarry"  href="#">Graphic Design Invoice</a>
+                <a class="link-summarry"  href="#">Web Design Invoice</a>
+                <a class="link-summarry"  href="#">Contractor Invoice Template</a>
+                <a class="link-summarry"  href="#">Photography Invoice Template</a>
+                <a class="link-summarry"  href="#">Self Employed Invoice Template</a>
+            </div>
+         </details>
+         <details>
+            <summary class="footer-link" >
+                Proposal Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Website Proposal Template</a>
+                <a class="link-summarry"  href="#">Digital Marketing Proposal Template</a>
+                <a class="link-summarry"  href="#">Social Media Marketing Proposal</a>
+                <a class="link-summarry"  href="#">Graphic Design Proposal</a>
+                <a class="link-summarry"  href="#">Freelance Proposal Template</a>
+                <a class="link-summarry"  href="#">SEO Proposal Template</a>
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Contract Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Online Contract</a>
+                <a class="link-summarry" href="#">Graphic Design Contract</a>
+                <a class="link-summarry" href="#">Freelance Contract Template</a>
+                <a class="link-summarry" href="#">Social Media Marketing Contract</a>
+                <a class="link-summarry" href="#">Software Development Contract</a>
+                <a class="link-summarry" href="#">Web Design Contract</a>
+                <a class="link-summarry" href="#">Video Production Contract</a>
+                <a class="link-summarry" href="#">Public Relations Contract</a>
+                <a class="link-summarry" href="#">Translation Contract</a>
+               
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Agreement Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Retainer Agreement Template </a>
+                <a class="link-summarry" href="#"> Influencer Agreement Template</a>
+                <a class="link-summarry" href="#">Collaboration Agreement Template </a>
+                <a class="link-summarry" href="#">Software Development Agreement </a>
+                <a class="link-summarry" href="#">Marketing Agreement Template </a>
+                
+               
+                
+            </div>
+         </details>
+         <details>
+            <summary class="footer-link" >
+                Scope of Work Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Website Development Scope of Work </a>
+                <a class="link-summarry" href="#">Digital Marketing Scope of Work </a>
+                <a class="link-summarry" href="#"> Consultant Statement of Work Template</a>
+                <a class="link-summarry" href="#">Software Development Scope of Work </a>
+                
+                
+               
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Quote Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Freelance Quotation Template </a> 
+                <a class="link-summarry" href="#">Web Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Graphic Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Interior Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Video Production Quotation Template </a> 
+                <a class="link-summarry" href="#">Social Media Marketing Quotation </a> 
+                
+            </div>
+         </details>
+  
+         <a href="#">Credit Note Templates</a>
+         <a href="#">Estimate Templates</a>
+               
+        </div>
+    </div>
+    <div class="footer-child">
+        <div class="footer-heading">BONSAI</div>
+        <div class="footer-link">
+            <a href="page_about.html">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Support</a>
+            <a href="#"> LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Legal</a>
+            <div id="fot-link">
+                <a href="#">Affiliates</a>
+            </div>
+            <a href="#">Write for Us</a>
+            
+
+            <details id="invoice-temolates">
+                <summary class="footer-link" >
+                    Invoice Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div >
+                    <a class="link-summarry" href="#">Freshbooks Alternatives</a>
+                    <a class="link-summarry"  href="#">Quickbooks Alternatives</a>
+                    <a class="link-summarry"  href="#">Wave vs Quickbooks</a>
+                    <a class="link-summarry"  href="#">Xero vs Quickbooks</a>
+                    <a class="link-summarry"  href="#">Freshbooks vs Quickbooks</a>
+                </div>
+             </details>
+        </div>
+    </div>
+</div>
+    
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+.navbar {
+  /* border: 1px solid red; */
+  background-color: rgb(21, 98, 242);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.right_nav_items {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar button:hover {
+  background-color: cornsilk;
+}
+
+@media (max-width: 667px) {
+  .navbar {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 5px 20px;
+  }
+}

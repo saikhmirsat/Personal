@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="image" href="https://i.ibb.co/qDLR4Vf/Icon.jpg">
+    <title> Freelance Time Tracking - Bonsai</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: white;
+        font-family: 'Proximanova opt',sans-serif;
+    
+        
+    }
+    .navbar{
+        /* border: 1px solid red; */
+        height: 70px;
+        width: 100%;
+        padding: 12px 9% 12px 9%;
+        background-color: white;
+        display: flex;
+        position: fixed;
+        z-index: 5;
+        
+
+    
+    }
+    .logo{
+        /* border: 1px solid rgb(21, 0, 255); */
+        width: 152px;
+        height: 60px;
+        /* margin-top: 12px; */
+        /* margin-bottom: 12px; */
+        display: flex;
+        align-items: center;
+        
+    }
+    .logo>a>img{
+        width: 100%;
+        /* border: 1px solid rgb(21, 0, 255); */
+    }
+    .mid-item{
+        /* border: 1px solid darkblue; */
+        display: flex;
+        align-items: center;
+        margin-left: 16%;
+    }
+    .mid-item ul{
+        display: inline-flex;
+        list-style: none;
+    }
+    .mid-item ul li{
+        width: auto;
+        margin-right: 30px;
+        /* border: 1px solid lawngreen; */
+        font-size: 17px;
+        width: 93px;
+        
+    }
+    .mid-item ul li a{
+        text-decoration: none;
+        color: #4c4d5f;
+    }
+    .login{
+        /* border: 1px solid olivedrab; */
+        display: inline-flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .login a{
+        margin-left: 15px;
+        text-decoration: none;
+        padding: 12px 27px 9px;
+        border: 1px solid #00b289;
+        border-radius: 4px;
+        color: rgb(12, 2, 2);
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: .6px;
+        padding-right: 22px;
+        padding-left: 22px;
+        
+    }
+    .login>a:nth-child(1){
+        color:#00b289;
+        border: 1px solid #00b289;;
+    }
+    .login>a:nth-child(2){
+        color:#f9fbfb;
+        background-color: #00b289;
+        width: 133px;
+    }
+    .login>a:nth-child(1):hover{
+        background-color: #00b289;
+        color: white;
+    }
+    .login>a:nth-child(2):hover{
+        background-color: #04906f;
+        color: white;
+    }
+    .down-arr{
+        width: 10px;
+    }
+    .login{
+        /* border: 1px solid olivedrab; */
+        display: inline-flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .login a{
+        margin-left: 15px;
+        text-decoration: none;
+        padding: 12px 27px 9px;
+        border: 1px solid #00b289;
+        border-radius: 4px;
+        color: rgb(12, 2, 2);
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: .6px;
+        padding-right: 22px;
+        padding-left: 22px;
+        
+    }
+    .login>a:nth-child(1){
+        color:#00b289;
+        border: 1px solid #00b289;;
+    }
+    .login>a:nth-child(2){
+        color:#f9fbfb;
+        background-color: #00b289;;
+    }
+    .login>a:nth-child(1):hover{
+        background-color: #00b289;
+        color: white;
+    }
+    .login>a:nth-child(2):hover{
+        background-color: #04906f;
+        color: white;
+    }
+    .back-image{
+        width: 100%;
+    }
+    .back-image>img{
+        width: 60%;
+        margin-left: 40%;
+        opacity: 0.1;
+
+
+    }
+    .container-1{
+      /* border: 3px solid rgb(0, 4, 255); */
+      /* background-color: #04906f; */
+      width: 100%;
+      height: 800px;
+      position: absolute;
+      top: 80px;
+      display: flex;
+      
+     
+    }
+    .container-1>div{
+        /* border: 1px solid black; */
+        height: 400px;
+        width: 400px;
+        
+        
+    }
+    .container-1>div:nth-child(1){
+        margin-left: 10%;
+        margin-top: 15%;
+        width: 500px;
+    }
+    .container-1>div:nth-child(2){
+        margin-left: 11%;
+    margin-top: 122px;
+    width: 630px;
+    }
+    #top-right-image{
+        width: 100%;
+    }
+    .watch{
+        display: flex;
+        gap: 10px;
+        color: #00b289;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .child-1-head{
+        font-size: 2.75rem;
+    line-height: 130%;
+    font-family: 'Proximanova opt';
+    font-weight: lighter;
+    color: #4c525a;
+    margin-top: 20px;
+  
+    }
+    .child-1-para{
+        font-weight: 500;
+        font-size: 1.25rem;
+    line-height: 140%;
+    color: #4c525a;
+    margin-top: 20px;
+    }
+    .child-1-input{
+        /* border: 1px solid blue; */
+        margin-top: 40px;
+        display: flex;
+        height: 70px;
+    }
+    .child-1-input>input{
+    height: 70px;
+    margin-bottom: 0;
+    padding-right: 10px;
+    padding-left: 28px;
+    border: 2px solid #01b289;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 66%;
+    }
+    .startfree-btn{
+        width: 34%;
+    height: 70px;
+    padding-right: 37px;
+    padding-left: 37px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #00b289;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .startfree-btn:hover{
+        background-color: #099574;
+    }
+    .mid-heading{
+      position: absolute;
+      bottom: -180px;
+      width: 62%;
+      margin-left: 17%;
+    
+      
+    }
+    .mid-heading>h2{
+    font-size: 35px;
+    line-height: 140%;
+    font-family: 'Proximanova opt';
+    font-weight: lighter;
+    color: #4c525a;
+    }
+    .mid-heading>h2>a{
+        text-decoration: none;
+        color: #099574;
+    }
+
+   .container-2{
+       /* position: absolute; */
+       /* border: 1px solid rgb(61, 226, 43); */
+       width: 80%;
+       height: 300px;
+       margin: auto;
+       margin-top: 180px;
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 120px;  
+    }
+    .container-2>div{
+       /* border: 1px solid rgb(43, 150, 226); */
+
+   }
+   .container-2-child{
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-weight: 500;
+    font-family: 'Proximanova opt',sans-serif;
+    color: #4c525a;
+    margin-top: 25px;
+   }
+   .container-2-child-para{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 82%;
+   }
+    .container-3{
+        /* border: 1px solid red; */
+        height: 1500px;
+        width: 82%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        margin-top: 60px;
+        gap: 50px;
+    }
+    .container-3>div{
+        /* border: 1px solid blue; */
+        height: 400px;
+    }
+    .container-3-child-head>h2{
+        font-family: 'Proximanova opt';
+        margin-top: 0px;
+        font-size: 2rem;
+        line-height: 140%;
+        font-weight: 400;
+        margin-top: 21%;
+        color: #4c525a;
+    }
+    .container-3-child>div>img{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .container-3-child-para>p{
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 140%;
+        width: 90%;
+        margin-top: 30px;
+        color: #4c525a;
+    }
+    .container-3-child-4{
+        padding-left: 50px;
+    }
+    .container-4{
+        /* border: 1px solid red; */
+        width: 40%;
+        margin: auto;
+        margin-top: 60px;
+    }
+    .container-4>h2{
+        font-size: 2rem;
+    line-height: 140%;
+    color: #4c525a;
+    font-weight: 400;
+    font-family: 'Proximanova opt';
+    
+    }
+    .container-4>p{
+        font-weight: 300;
+        font-size: 1.5rem;
+    line-height: 120%;
+    color: #4c525a;
+    margin-top: 10px;
+    }
+   .container-5{
+    /* border:1px solid #04906f; */
+    height: 300px;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 150px;
+    margin-top: 90px;
+   }
+
+   .container-5-head{
+    font-size: 1.375rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #4c525a;
+    margin-top: 30px;
+}
+.container-5-para{
+    font-weight: 300;
+    font-size: 1rem;
+    color: #4c525a;
+    margin-top: 8px;
+    width: 74%;
+   }
+
+   .container-6{
+    /* border: 1px solid blue; */
+    height: 250px;
+    width: 68%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #f2faff;
+    
+   }
+  
+   .container-6>div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .container-6>div>h2{
+    /* border: 1px solid green; */
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 120%;
+    color: #4c525a;
+    font-family: 'Proximanova opt';
+    width: 80%;
+    
+   }
+   .container-6>div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .container-6>div>a{
+    background-color: #099574;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px 13px;
+    border-radius: 4px;
+    letter-spacing: .07em;
+    color: #fff;
+    
+   }
+   .container-6>div>a:hover{
+    background-color: #07b089;
+   }
+   
+.container-7{
+    height: 100px;
+    width: 68%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%; 
+}
+.container-7>div{
+    background-color: #e6f5ff;
+}
+.container-7>div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;  
+    font-size: 1.25rem;
+    line-height: 140%;
+    color: #4c525a;
+}
+.app-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#btm-heading{
+    width: 80%;
+    margin: auto;
+    margin-top:90px ;
+    font-size: 2rem;
+    line-height: 140%;
+    font-family: 'Proximanova opt';
+    font-weight: 400;
+    color: #4c525a;
+
+}
+
+.container-8{
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    padding-top: 50px;
+    margin-top: 0px;
+}
+
+.container-8-child>a{
+    display: flex;
+    text-decoration: none;
+    color:#4c4d5f;
+    
+}
+.container-8-head>div{
+    font-size: 1.375rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #4c4d5f;
+    margin-top: 20px;
+}
+.container-8-head{
+    width: 69%;
+    padding-left: 40px;
+}
+
+.container-8-head>p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4c4d5f;
+    
+}
+.container-8>div:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* padding: 5px; */
+    margin: 5px;
+    background-color: white;
+}
+.footer{
+    /* border: 1px solid red; */
+    height: 650px;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3,39% 40% 27%);
+    margin-bottom: 120px;
+    font-family: 'Proximanova opt',sans-serif;
+}
+
+.footer-heading{
+    margin-bottom: 40px;
+    color: #4c4d5f;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: .12px;
+}
+.footer-link>a{
+    text-decoration: none;
+    margin-bottom: 1px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+}
+#fot-link>a{
+    text-decoration: none;
+    color: #696a7c;
+}
+#fot-link{
+    margin-top: 30px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 320;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid>a{
+text-decoration: none;
+display: block;
+color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#templates{
+ margin-bottom: 20px;
+}
+
+.link-summarry{
+    text-decoration: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+    margin-left: 30px;
+    
+}
+.footer-link>img{
+   width: 16px;
+   border: 0;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+   
+   
+}
+.footer-link{
+    list-style: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    cursor: pointer;
+}
+#invoice-temolates{
+    margin-top: 30px;
+}
+
+
+</style>
+<body>
+    <!-- <div class="blue-background"></div> -->
+   <!-- Nav BAR -->
+   <div class="navbar">
+    <div class="logo">
+        <a href="Index.html"><img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt=""></a>
+    </div>
+    
+    <div class="mid-item">
+        <ul>
+            <li><a href="#">Product <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+            <li><a href="#">Templates <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+            <li><a href="PricingPage.html">Pricing</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+        </ul>
+    </div>
+    
+    <div class="login">
+        <a href="Login.html">LOGIN</a>
+        <a href="SigupPage.html">START FREE</a>
+    </div>
+    
+</div>
+
+<!-- END NAVBAR -->
+    <div class="back-image">
+        <img src="https://i.ibb.co/5nLp59w/background-back.png" alt="background-back" border="0">
+    </div>
+    <div class="container-1">
+        <div class="child-1">
+            <div class="watch">
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c8e88feb67d_time-tracking%20colour.svg" alt="">
+                <div>Time Tracking</div>
+            </div>
+            <div> <h1 class="child-1-head">The robust time tracker made for your workflow.</h1></div>
+            <div ><p class="child-1-para">Manage your hours with ease with an all-in-one time tracker, timesheets and billing system.</p></div>
+            <div class="child-1-input">
+                <input type="text" placeholder="Enter Your Email">
+                <a href="SigupPage.html" class="startfree-btn">START FREE</a>
+            </div>
+        </div>
+
+        
+        <div class="child-2">
+            <img id="top-right-image" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e6bbbc1e37d0b57e90a317c_time-tracking-img-min.png" alt="">
+        </div>
+    </div>
+    <div class="mid-heading">
+        
+        <h2>A fully-featured time tracker that’s built specifically for <a href="#"> online contract </a> work and invoicing clients.</h2>
+    </div>
+    <div class="container-2">
+          <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c14c3d1e8b33_ill_Easily%20Billable.svg" alt="">
+            <div class="container-2-child">Easily Billable</div>
+            <div class="container-2-child-para">Set an hourly rate per-project for tracking time and automatically invoicing the completed timesheet.</div>
+        </div>
+        <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c1031b1e8b34_ill_Project-Based.svg" alt="">
+            <div class="container-2-child">Project-Based</div>
+            <div class="container-2-child-para">Track time on projects with your collaborators and see how many hours still need to be billed.</div>
+        </div>
+        <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c122ac1e8b35_ill_Cross-Platform.svg" alt="">
+            <div class="container-2-child">Cross-Platform</div>
+            <div class="container-2-child-para">Use the Bonsai time tracker on the web, mobile apps, macOS app and Chrome Extension.</div>
+          </div>
+    </div>
+    <div class="container-3">
+        <div class="container-3-child">
+           <div class="container-3-child-head">
+            <h2>Invoice Hours</h2>
+           </div> 
+           <div class="container-3-child-para">
+            <p>Set a project’s hourly rate, start tracking time and bill time to your client with a click. Round the time up to make the billing even smoother.</p>
+           </div>    
+        </div>
+        <div class="container-3-child">
+            <div>
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e6bc77f7724a02f0a97e5e1_create%20an%20invoice-min%20(2).png" alt="">
+            </div>
+        </div>
+
+        <div class="container-3-child">
+            <div>
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e6bc8038569d7612605c001_invoice%20timesheet-min.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="container-3-child-4">
+            <div class="container-3-child-head">
+                <h2>Centralize Timesheets</h2>
+               </div> 
+               <div class="container-3-child-para">
+                <p>Whether you’re tracking time as a team on a project or working solo, you can keep all your project’s timesheets in the same place to see the hours billed and to-be paid.</p>
+               </div>
+        </div>
+
+
+        <div class="container-3-child">
+            <div class="container-3-child-head">
+                <h2>Use It Anywhere</h2>
+               </div> 
+               <div class="container-3-child-para">
+                <p>Download the app on iOS, Android, Mac and Chrome so the time tracker works the way you do. Use a time tracker that supports your workflow.</p>
+               </div>
+        </div>
+
+        <div class="container-3-child">
+            <div>
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e6bc84f8569d7c4cc05c0a2_timer%20graphic-min.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-4">
+          <h2>Trusted by 500K+ self-employed workers and small businesses</h2>
+          <p>Whether you’re just getting started or your business is booming, Bonsai has you covered.</p>
+    </div>
+    <div class="container-5">
+        <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7ca8ebfeb662_ill_Built%20for_4%20block.svg" alt="">
+            <div class="container-5-head">Built for All Work Types</div>
+            <div class="container-5-para">We proudly back people with wide-ranging businesses—from design and marketing to development, writing, and photography.</div>
+        </div>
+        <div>
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c967efeb661_ill_Global%20Support_4%20block.svg" alt="">
+            <div class="container-5-head">Built for Global Businesses</div>
+            <div class="container-5-para">Bonsai has international coverage across the United States, Canada, UK, Australia and more, with 180 currencies supported.</div>
+        </div>
+    </div>
+
+    <div class="container-6">
+         <div>
+            <h2>Simplify your workflow with Bonsai time tracking.</h2>
+         </div>
+         <div>
+            <a href="/makeshift-top-3565/SigupPage.html">SART FREE</a>
+         </div>
+    </div>
+    <div class="container-7">
+        <div>Available for download on the most popular platforms:</div>
+        <div class="app-logo">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c145b81e8b36_chrome.svg" alt="">
+        </div>
+        <div class="app-logo">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c12aac1e8b37_ios.svg" alt="">
+        </div>
+        <div class="app-logo">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c141b51e8b38_android.svg" alt="">
+        </div>
+    </div>
+
+    <h2 id="btm-heading">Keep Exploring Bonsai’s Features</h2>
+
+    <div class="container-8">
+        <div class="container-8-child">
+           <a href="#">
+            <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fdcff2a5865afca6505f5_Explore%20invoices.svg" alt="">
+            <div class="container-8-head">
+                <div >Invoices</div>
+                <p>Get paid on time using smart invoicing with automatic reminders, read-receipts and a variety of payment options.</p>
+            </div>
+           </a>
+        </div>
+
+        <div class="container-8-child">
+            <a href="#">
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fdcff2a586587ad6505f6_Explore%20task%20management.svg" alt="">
+            <div class="container-8-head">
+                <div >Task Management</div>
+                <p>Stay on top of your ongoing tasks and todos with simple task creation, templating and due dates built right into your projects.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-child">
+            <div class="footer-heading">PRODUCT</div>
+            <div class="footer-link">
+                <a href="#">Proposals</a>
+                <a href="#">Contracts</a>
+                <a href="#">Invoicing</a>
+                <a href="#">Client CRM</a>
+                <a href="#">Time Tracking</a>
+                <a href="#">Task Tracking</a>
+                <a href="#">Forms</a>
+                <a href="#">Accounting</a>
+                <a href="#">Bonsai Tax</a>
+                <a href="#">Bonsai Cash</a>
+                <div id="fot-link">
+                    <a href="#">Pricing</a>
+                </div>
+                <a href="#">Bonsai Reviews</a>
+            </div>
+        </div>
+
+
+        <div class="footer-child">
+    
+            <div class="footer-heading">FREE RESOURCES</div>
+            <div class="footer-link">
+                <a href="#">Freelance Resources</a>
+                <a href="#">Freelance Blog by Bonsai</a>
+                <a href="#">How to Write a Contract</a>
+                <a href="#">Online Signature Maker</a>
+
+                <div id="footer-child-2-mid"</div>
+                    <a href="#"> Self-Employed Taxes Hub</a>
+                    <a href="#"> Self-Employed Tax Calculator</a>
+                    <a href="#">Self-Employed Tax Deductions</a>
+                </div>
+
+             <div class="footer-heading" id="templates"</div>Templates</div>
+             <details>
+                <summary class="footer-link" >
+                    Invoice Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div >
+                    <a class="link-summarry" href="#">Invoice Generator</a>
+                    <a class="link-summarry"  href="#">Blank Invoice Template</a>
+                    <a class="link-summarry"  href="#">Consultant Invoice Template</a>
+                    <a class="link-summarry"  href="#">Editable Invoice Template</a>
+                    <a class="link-summarry"  href="#">Graphic Design Invoice</a>
+                    <a class="link-summarry"  href="#">Web Design Invoice</a>
+                    <a class="link-summarry"  href="#">Contractor Invoice Template</a>
+                    <a class="link-summarry"  href="#">Photography Invoice Template</a>
+                    <a class="link-summarry"  href="#">Self Employed Invoice Template</a>
+                </div>
+             </details>
+             <details>
+                <summary class="footer-link" >
+                    Proposal Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div>
+                    <a class="link-summarry" href="#">Website Proposal Template</a>
+                    <a class="link-summarry"  href="#">Digital Marketing Proposal Template</a>
+                    <a class="link-summarry"  href="#">Social Media Marketing Proposal</a>
+                    <a class="link-summarry"  href="#">Graphic Design Proposal</a>
+                    <a class="link-summarry"  href="#">Freelance Proposal Template</a>
+                    <a class="link-summarry"  href="#">SEO Proposal Template</a>
+                    
+                </div>
+             </details>
+
+             <details>
+                <summary class="footer-link" >
+                    Contract Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div>
+                    <a class="link-summarry" href="#">Online Contract</a>
+                    <a class="link-summarry" href="#">Graphic Design Contract</a>
+                    <a class="link-summarry" href="#">Freelance Contract Template</a>
+                    <a class="link-summarry" href="#">Social Media Marketing Contract</a>
+                    <a class="link-summarry" href="#">Software Development Contract</a>
+                    <a class="link-summarry" href="#">Web Design Contract</a>
+                    <a class="link-summarry" href="#">Video Production Contract</a>
+                    <a class="link-summarry" href="#">Public Relations Contract</a>
+                    <a class="link-summarry" href="#">Translation Contract</a>
+                   
+                    
+                </div>
+             </details>
+
+             <details>
+                <summary class="footer-link" >
+                    Agreement Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div>
+                    <a class="link-summarry" href="#">Retainer Agreement Template </a>
+                    <a class="link-summarry" href="#"> Influencer Agreement Template</a>
+                    <a class="link-summarry" href="#">Collaboration Agreement Template </a>
+                    <a class="link-summarry" href="#">Software Development Agreement </a>
+                    <a class="link-summarry" href="#">Marketing Agreement Template </a>
+                    
+                   
+                    
+                </div>
+             </details>
+             <details>
+                <summary class="footer-link" >
+                    Scope of Work Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div>
+                    <a class="link-summarry" href="#">Website Development Scope of Work </a>
+                    <a class="link-summarry" href="#">Digital Marketing Scope of Work </a>
+                    <a class="link-summarry" href="#"> Consultant Statement of Work Template</a>
+                    <a class="link-summarry" href="#">Software Development Scope of Work </a>
+                    
+                    
+                   
+                    
+                </div>
+             </details>
+
+             <details>
+                <summary class="footer-link" >
+                    Quote Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div>
+                    <a class="link-summarry" href="#">Freelance Quotation Template </a> 
+                    <a class="link-summarry" href="#">Web Design Quotation Template </a> 
+                    <a class="link-summarry" href="#">Graphic Design Quotation Template </a> 
+                    <a class="link-summarry" href="#">Interior Design Quotation Template </a> 
+                    <a class="link-summarry" href="#">Video Production Quotation Template </a> 
+                    <a class="link-summarry" href="#">Social Media Marketing Quotation </a> 
+                    
+                </div>
+             </details>
+      
+             <a href="#">Credit Note Templates</a>
+             <a href="#">Estimate Templates</a>
+                   
+            </div>
+        </div>
+        <div class="footer-child">
+            <div class="footer-heading">BONSAI</div>
+            <div class="footer-link">
+                <a href="/page_about.html">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Support</a>
+                <a href="#"> LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Legal</a>
+                <div id="fot-link">
+                    <a href="#">Affiliates</a>
+                </div>
+                <a href="#">Write for Us</a>
+                
+
+                <details id="invoice-temolates">
+                    <summary class="footer-link" >
+                        Invoice Templates
+                        <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                    </summary>
+                    <div >
+                        <a class="link-summarry" href="#">Freshbooks Alternatives</a>
+                        <a class="link-summarry"  href="#">Quickbooks Alternatives</a>
+                        <a class="link-summarry"  href="#">Wave vs Quickbooks</a>
+                        <a class="link-summarry"  href="#">Xero vs Quickbooks</a>
+                        <a class="link-summarry"  href="#">Freshbooks vs Quickbooks</a>
+                    </div>
+                 </details>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

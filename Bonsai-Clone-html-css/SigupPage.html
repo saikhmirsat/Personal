@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="image" href="https://i.ibb.co/pnnyM2D/Icon.jpg">
+    <title>Sign Up - Bonsai</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+   #line-mid{
+    margin-top: 300px;
+    border: 1px solid gainsboro;
+   }
+   #main-container{
+    border: 1px solid gainsboro;
+    height: auto;
+    width: 58%;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    margin-left: 21%;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,40% 60%);
+
+   }
+   
+   #main-container>div:nth-child(1){
+    padding: 60px 40px 60px 40px;
+   }
+   #child-1{
+    border-right: 1px solid gainsboro;
+   }
+   #child-1-image{
+    width: 40%;
+   }
+   #child-1>div{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 550;
+    color: #292a2d;
+    max-width: 230px;
+    font-family: sans-serif;
+    margin-top: 20px;
+   }
+   #child-1>h1{
+    color: #00b289;
+    font-size: 40px;
+    margin-top: 220%;
+    margin-bottom: 0px;
+    padding: 0px;
+   }
+   #child-1>p{
+    font-size: 12px;
+    font-style: italic;
+    color: #292a2d;
+    font-family: sans-serif;
+    width: 88%;
+   }
+   #child-1>p>span{
+    display: inline-block;
+    margin-top: 7px;
+    margin-top: 5px;
+    font-size: 10px;
+    opacity: 0.8;
+   }
+
+   /* ----child-2 */
+   #child-2{
+    margin: auto;
+    
+   }
+   #child-2-inner-box {
+        height: auto;
+        width: 400px;
+        color: gray;
+        padding: 45px  30px;
+    }
+    #child-2-inner-box > #heading {
+      margin-bottom: 30px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #292a2d;
+      font-size: 26px;
+      font-size: 28px;
+    max-width: 100%;
+    font-weight: 600;
+    }
+    
+    #child-2-inner-box > a {
+      text-decoration: none;
+      display: flex;
+      border: 1px solid #ddd;
+      text-align: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 11px;
+      border-radius: 4px;
+      line-height: 1em;
+      color: #666;
+    }
+    #child-2-inner-box > a > img {
+      width: 20px;
+    }
+    #child-2-inner-box > a:hover {
+      border: 1px solid #00b289;
+    }
+    #line {
+      border-bottom: 1px solid rgb(245, 243, 243);
+      margin-top: 28px;
+      margin-bottom: 25px;
+    }
+    #line-p > p {
+      position: absolute;
+      bottom: 629px;
+      left: 69%;
+      background-color: white;
+      padding: 2px 10px;
+      font-size: 13px;
+      color: rgb(179, 175, 175);
+    }
+    .input-heading{
+        font-size: 12px;
+        font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #878787;
+    line-height: 1;
+    font-family: sans-serif;
+    }
+    .child-2-input {
+      height: 20px;
+      width: 94%;
+      padding: 10px 10px 9px;
+      font-size: 16px;
+      background: #fff;
+          border: 1px solid #ccd0d2;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 8px;
+      font-family: inherit;
+
+    }
+
+    .child-2-input:hover {
+      border: 1px solid #00b289;
+    }
+    .para{
+        color: #aaa;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    }
+
+    #child-2-select{
+        /* border: 1px solid red; */
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,58% 34%);
+        gap: 30px;
+        margin-top: 10px;
+    }
+    #child-2-select>div{
+        /* border: 1px solid blue; */
+        font-size: 12px;
+        font-family: sans-serif;
+    }
+
+    #child-2-option{
+        /* border: 1px solid red; */
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,57% 35%);
+        gap: 30px;
+        
+
+    }
+    #child-2-option>div{
+        /* border: 1px solid blue; */
+        height: 40px;
+        display: flex;
+    }
+    #child-2-option>div>select{
+        width: 100%;
+            color: rgb(51, 51, 51);
+            font-size: 14px;
+   
+    }
+    #last-input{
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+    #last-p{
+        color: #aaa;
+    font-size: 12px;
+    font-family:sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    }
+    #cond{
+        text-decoration: none;
+        color: #878787;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 35%;
+    }
+
+    .click-btn{
+        height: 45px;
+        width: 100%;
+        /* border: 1px solid blueviolet; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00b289;
+        border-radius: 5px;
+        margin-top: 30px;
+        
+
+    }
+    .click-btn>a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-family: sans-serif;
+        line-height: 1.5;
+    font-weight: 600;
+    }
+    .click-btn:hover{
+        background-color: #01c799;
+    }
+
+    #line-2 {
+      border-bottom: 1px solid rgb(224, 222, 222);
+      margin-top: 28px;
+      margin-bottom: 25px;
+    }
+    #line-p-2 > p {
+      position: absolute;
+      bottom: 111px;
+      left: 61%;
+      background-color: white;
+      padding: 2px 10px;
+      font-size: 13px;
+      color: rgb(179, 175, 175);
+    }
+    #log-in-btn{
+        height: 45px;
+        width: 100%;
+        border: 1px solid #00b289;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        margin-top: 30px;
+        
+
+    }
+    #log-in-btn>a{
+        text-decoration: none;
+        color:#00b289;
+        font-size: 16px;
+        font-family: sans-serif;
+        line-height: 1.5;
+    font-weight: 600;
+    }
+
+    #footer-1 {
+      /* border: 1px solid red; */
+      height: auto;
+      width: 40%;
+      margin: auto;
+      margin-top: 50%;
+    }
+    #footer-1 > ul > li > a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    #footer-1 > ul {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+    }
+    #footer-1 > ul > li:nth-child(1) {
+      list-style: none;
+    }
+    #footer-2 {
+      /* border: 1px solid red; */
+      height: auto;
+      width: 60%;
+      margin: auto;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ccd0d2;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 100px;
+    }
+    #footer-2 > div > span > a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ccd0d2;
+      text-decoration: underline;
+    }
+
+</style>
+<body>
+    <hr id="line-mid">
+    <div id="main-container">
+       <div id="child-1">
+        <img id="child-1-image" src="https://app.hellobonsai.com/assets/logos/bonsai-0fe7c417d79806408d8117d5a0ca871f0be3afb1104d54b53f59f53cbda2f28b.svg" alt="">
+        <div>Join 500,000+ freelancers and agencies using Bonsai.</div>
+
+        <h1>“</h1>
+        <p>Anyone doing #freelance work should use @bonsaiinc for contracts/payment. It's amazing and saves boatloads of time. <span>Nathanael Smith, Product Designer</span></p>
+       </div>
+
+             <!-- child-2 -->
+
+       <div id="child-2">
+        <div id="child-2-inner-box">
+            <div id="heading">Try Bonsai free with your Workflow today</div>
+            <a
+            href="#"><img src="https://pngimg.com/uploads/google/google_PNG19635.png"alt=""/>
+            <p>Sign In with Google</p>
+          </a>
+    
+    
+          <div id="line-p">
+            <div id="line"></div>
+            <p>or</p>
+          </div>
+    
+          <div class="input-heading">EMAIL</div>
+          <input type="mail" name="" class="child-2-input" placeholder="your@email.com">
+          <div class="input-heading">FULL NAME</div>
+          <input type="text" name="" class="child-2-input" placeholder="Jane Smith">
+          <div class="input-heading">PASSWORD</div>
+          <input type="password" name="" class="child-2-input" id="last-input" placeholder=".........">
+          <p class="para">Your password must be at least 6 characters</p>
+    
+    
+    
+          <div id="child-2-select" >
+            <div>COUNTRY
+            </div>
+            <div>CURRENCY</div>
+          </div>
+    
+    
+          <div id="child-2-option">
+    
+            <div class="select-opt">
+                <select name="" id="">
+                    <option value="">India</option>
+                </select>
+            </div>
+            <div class="select-opt">
+                <select name="" id="">
+                    <option value="">INR</option>
+                </select>
+            </div>
+          </div>
+           <div>
+               <p id="last-p">By creating an account, you accept our</p>
+               <a  id="cond" href="#">Terms and Conditions</a>
+           </div>
+
+
+           <div class="click-btn">
+            <a href="">Create Free Account</a>
+           </div>
+
+           <div id="line-p-2">
+            <div id="line-2"></div>
+            <p>Already have an account?</p>
+          </div>
+
+          <div id="log-in-btn">
+            <a href="Login.html">Log In</a>
+           </div>
+          
+        </div>
+
+      </div>
+    </div>
+    
+
+
+    <div id="footer-1">
+        <ul>
+          <li><a href="#">Contact Us </a></li>
+          <li><a href="#"> Help Center </a></li>
+          <li><a href="/makeshift-top-3565/about.html"> About Us </a></li>
+          <li><a href="#"> Plans & Pricing </a></li>
+          <li><a href="#"> Privacy policy</a></li>
+        </ul>
+      </div>
+  
+      <div id="footer-2">
+        <div>
+          ©2022 Bonsai Technologies Inc — Payments, banking, and issuing services
+          are provided by <span><a href="#">Stripe Payments Company</a></span
+          >, Evolve Bank & Trust (Member FDIC), and Celtic Bank (Member FDIC),
+          respectively. Bonsai is not a law firm, and does not provide legal
+          services, advice, or representation. &nbsp; &nbsp;
+          <span><a href="#">Term</a></span> &nbsp; &nbsp;<span
+            ><a href="#">Creadits</a></span
+          >
+        </div>
+      </div>
+
+    
+    
+</body>
+       
+
+
+
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="image" href="https://i.ibb.co/pnnyM2D/Icon.jpg">
+    <title>About Us - Bonsai</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+
+    }
+    body{
+        color: #4c525a;
+        font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+    background-color: #fff;
+    }
+     /* Navbar    */
+     .navbar{
+        border: 1px solid red;
+        height: 60px;
+        width: 100%;
+        padding: 12px 9% 12px 9%;
+        background-color: white;
+        display: flex;
+        position: fixed;
+        z-index: 5;
+        
+
+    
+    }
+    .logo{
+        /* border: 1px solid rgb(21, 0, 255); */
+        width: 152px;
+        height: 60px;
+        /* margin-top: 12px; */
+        /* margin-bottom: 12px; */
+        display: flex;
+        align-items: center;
+        
+    }
+    .logo>a>img{
+        width: 100%;
+        /* border: 1px solid rgb(21, 0, 255); */
+    }
+    .mid-item{
+        /* border: 1px solid darkblue; */
+        display: flex;
+        align-items: center;
+        margin-left: 16%;
+    }
+    .mid-item ul{
+        display: inline-flex;
+        list-style: none;
+    }
+    .mid-item ul li{
+        width: auto;
+        margin-right: 30px;
+        /* border: 1px solid lawngreen; */
+        font-size: 17px;
+        width: 93px;
+        
+    }
+    .mid-item ul li a{
+        text-decoration: none;
+        color: #4c4d5f;
+    }
+    .login{
+        /* border: 1px solid olivedrab; */
+        display: inline-flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    .login a{
+        margin-left: 15px;
+        text-decoration: none;
+        padding: 12px 27px 9px;
+        border: 1px solid #00b289;
+        border-radius: 4px;
+        color: rgb(12, 2, 2);
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: .6px;
+        padding-right: 22px;
+        padding-left: 22px;
+        
+    }
+    .login>a:nth-child(1){
+        color:#00b289;
+        border: 1px solid #00b289;;
+    }
+    .login>a:nth-child(2){
+        color:#f9fbfb;
+        background-color: #00b289;
+        width: 133px;
+    }
+    .login>a:nth-child(1):hover{
+        background-color: #00b289;
+        color: white;
+    }
+    .login>a:nth-child(2):hover{
+        background-color: #04906f;
+        color: white;
+    }
+    .down-arr{
+        width: 10px;
+    }
+
+    /* Navbar end */
+    #container{
+        /* border: 1px solid rebeccapurple; */
+        height: auto;
+        width: 64%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+
+        
+    }
+    
+    #container>div:nth-child(2){
+        padding-left: 60px;
+    }
+    #head{
+        margin-top: 200px;
+    margin-bottom: 15px;
+    font-family: 'Proximanova opt',sans-serif;
+    color: #4c525a;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    }
+.para{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+}
+#contact{
+    margin-top: 180px;
+    font-size: 1.625rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.arr{
+    width: 25px;
+    margin-top: 10px;
+}
+#con-2-child>div{
+    
+    /* border: 1px solid brown; */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+   
+}
+#con-2-child>div>a{
+    text-decoration: none;
+    color: #00b289;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+#or{
+    margin-top: 10px;
+    font-size: 1rem;
+}
+#bot-head{
+    font-size: 2rem;
+    line-height: 140%;
+    text-align: center;
+    padding-top: 50px;
+  
+}
+#img-box{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+#img-box>a>img{
+    
+    width: 150px;
+}
+#img-box>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#img-1{
+    height: 100%;
+}
+
+
+
+
+/* footer */
+.footer{
+    /* border: 1px solid red; */
+    height: 650px;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3,39% 40% 27%);
+    margin-bottom: 120px;
+    font-family: 'Proximanova opt',sans-serif;
+}
+
+.footer-heading{
+    margin-bottom: 40px;
+    color: #4c4d5f;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: .12px;
+}
+.footer-link>a{
+    text-decoration: none;
+    margin-bottom: 1px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+}
+#fot-link>a{
+    text-decoration: none;
+    color: #696a7c;
+}
+#fot-link{
+    margin-top: 30px;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 320;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid>a{
+text-decoration: none;
+display: block;
+color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+}
+#footer-child-2-mid{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#templates{
+ margin-bottom: 20px;
+}
+
+.link-summarry{
+    text-decoration: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    display: block;
+    margin-left: 30px;
+    
+}
+.footer-link>img{
+   width: 16px;
+   border: 0;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+   
+   
+}
+.footer-link{
+    list-style: none;
+    color: #4c4d5f;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: .11px;
+    cursor: pointer;
+}
+
+
+</style>
+<body>
+    <!-- Nav BAR -->
+   <div class="navbar">
+    <div class="logo">
+        <a href="Index.html"><img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt=""></a>
+    </div>
+    
+    <div class="mid-item">
+        <ul>
+            <li><a href="#">Product <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+            <li><a href="#">Templates <img class="down-arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt=""> </a></li>
+            <li><a href="PricingPage.html">Pricing</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+        </ul>
+    </div>
+    
+    <div class="login">
+        <a href="/makeshift-top-3565/Login.html">LOGIN</a>
+        <a href="/makeshift-top-3565/SigupPage.html">START FREE</a>
+    </div>
+    
+</div>
+
+<!-- END NAVBAR -->
+
+<div id="container">
+    
+    <div id="con-1-child">
+      <div id="head">Bonsai is building the global operating system for freelance work.</div>
+      <p class="para">
+        The way the world works is changing. <br>
+        <br>
+Companies want on-demand talent rather than full time employees. Workers want flexible and independent careers. This is one of the largest socio-economic shifts since the Industrial Revolution.
+<br><br>
+
+While the nature of work is changing rapidly, the tools and processes supporting it are stuck in the twentieth (or even nineteenth!) century. <br><br>
+
+Bonsai is dedicated to helping companies and independent talent work better together. We're building solutions to support a future where work is flexible and globally distributed.
+      </p>
+    </div>
+    <div id="con-2-child">
+
+        <div id="contact">Contact Us</div>
+        <p class="para">Want to get in touch?</p>
+        <div>
+            <a href="#">Chat with us </a>
+            <img class="arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/58868bcd2ef4daaf0f07293e_greenarrow.svg" alt="">
+            <p id="or">or</p>
+            <a href="saikh.mirsat.786@gmail.com"> email us</a>
+            <img class="arr" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/58868bcd2ef4daaf0f07293e_greenarrow.svg" alt="">
+        </div>
+
+    </div>
+</div> 
+<div id="bot-head">
+    Backed by a few of the world’s top investors
+</div>
+<div id="img-box">
+   <a href="https://www.ycombinator.com/">
+    <img id="img-1" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/58900cc7262fde01091aa620_yc-d38bf0d27e745439cea5cf2a4df46d4f.png" alt="">
+   </a>
+   <a href="https://matrixpartners.com/">
+    <img id="img-2" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/58900ce338ef3ebe08f460d5_matrix-060a345831c09666fb71f16e296f19fd.png" alt="">
+   </a>
+   <a href="https://www.indexventures.com/">
+    <img id="img-3" src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/58900cec38ef3ebe08f460db_icon-index-ventures-black-1ff539dd0d08ccbbfe9b6c18a5811804.png" alt="">
+   </a>
+</div>
+
+<div class="footer">
+    <div class="footer-child">
+        <div class="footer-heading">PRODUCT</div>
+        <div class="footer-link">
+            <a href="#">Proposals</a>
+            <a href="#">Contracts</a>
+            <a href="#">Invoicing</a>
+            <a href="#">Client CRM</a>
+            <a href="#">Time Tracking</a>
+            <a href="#">Task Tracking</a>
+            <a href="#">Forms</a>
+            <a href="#">Accounting</a>
+            <a href="#">Bonsai Tax</a>
+            <a href="#">Bonsai Cash</a>
+            <div id="fot-link">
+                <a href="#">Pricing</a>
+            </div>
+            <a href="#">Bonsai Reviews</a>
+        </div>
+    </div>
+
+
+    <div class="footer-child">
+
+        <div class="footer-heading">FREE RESOURCES</div>
+        <div class="footer-link">
+            <a href="#">Freelance Resources</a>
+            <a href="#">Freelance Blog by Bonsai</a>
+            <a href="#">How to Write a Contract</a>
+            <a href="#">Online Signature Maker</a>
+
+            <div id="footer-child-2-mid"</div>
+                <a href="#"> Self-Employed Taxes Hub</a>
+                <a href="#"> Self-Employed Tax Calculator</a>
+                <a href="#">Self-Employed Tax Deductions</a>
+            </div>
+
+         <div class="footer-heading" id="templates"</div>Templates</div>
+         <details>
+            <summary class="footer-link" >
+                Invoice Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div >
+                <a class="link-summarry" href="#">Invoice Generator</a>
+                <a class="link-summarry"  href="#">Blank Invoice Template</a>
+                <a class="link-summarry"  href="#">Consultant Invoice Template</a>
+                <a class="link-summarry"  href="#">Editable Invoice Template</a>
+                <a class="link-summarry"  href="#">Graphic Design Invoice</a>
+                <a class="link-summarry"  href="#">Web Design Invoice</a>
+                <a class="link-summarry"  href="#">Contractor Invoice Template</a>
+                <a class="link-summarry"  href="#">Photography Invoice Template</a>
+                <a class="link-summarry"  href="#">Self Employed Invoice Template</a>
+            </div>
+         </details>
+         <details>
+            <summary class="footer-link" >
+                Proposal Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Website Proposal Template</a>
+                <a class="link-summarry"  href="#">Digital Marketing Proposal Template</a>
+                <a class="link-summarry"  href="#">Social Media Marketing Proposal</a>
+                <a class="link-summarry"  href="#">Graphic Design Proposal</a>
+                <a class="link-summarry"  href="#">Freelance Proposal Template</a>
+                <a class="link-summarry"  href="#">SEO Proposal Template</a>
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Contract Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Online Contract</a>
+                <a class="link-summarry" href="#">Graphic Design Contract</a>
+                <a class="link-summarry" href="#">Freelance Contract Template</a>
+                <a class="link-summarry" href="#">Social Media Marketing Contract</a>
+                <a class="link-summarry" href="#">Software Development Contract</a>
+                <a class="link-summarry" href="#">Web Design Contract</a>
+                <a class="link-summarry" href="#">Video Production Contract</a>
+                <a class="link-summarry" href="#">Public Relations Contract</a>
+                <a class="link-summarry" href="#">Translation Contract</a>
+               
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Agreement Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Retainer Agreement Template </a>
+                <a class="link-summarry" href="#"> Influencer Agreement Template</a>
+                <a class="link-summarry" href="#">Collaboration Agreement Template </a>
+                <a class="link-summarry" href="#">Software Development Agreement </a>
+                <a class="link-summarry" href="#">Marketing Agreement Template </a>
+                
+               
+                
+            </div>
+         </details>
+         <details>
+            <summary class="footer-link" >
+                Scope of Work Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Website Development Scope of Work </a>
+                <a class="link-summarry" href="#">Digital Marketing Scope of Work </a>
+                <a class="link-summarry" href="#"> Consultant Statement of Work Template</a>
+                <a class="link-summarry" href="#">Software Development Scope of Work </a>
+                
+                
+               
+                
+            </div>
+         </details>
+
+         <details>
+            <summary class="footer-link" >
+                Quote Templates
+                <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+            </summary>
+            <div>
+                <a class="link-summarry" href="#">Freelance Quotation Template </a> 
+                <a class="link-summarry" href="#">Web Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Graphic Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Interior Design Quotation Template </a> 
+                <a class="link-summarry" href="#">Video Production Quotation Template </a> 
+                <a class="link-summarry" href="#">Social Media Marketing Quotation </a> 
+                
+            </div>
+         </details>
+  
+         <a href="#">Credit Note Templates</a>
+         <a href="#">Estimate Templates</a>
+               
+        </div>
+    </div>
+    <div class="footer-child">
+        <div class="footer-heading">BONSAI</div>
+        <div class="footer-link">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Support</a>
+            <a href="#"> LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Legal</a>
+            <div id="fot-link">
+                <a href="#">Affiliates</a>
+            </div>
+            <a href="#">Write for Us</a>
+            
+
+            <details id="invoice-temolates">
+                <summary class="footer-link" >
+                    Invoice Templates
+                    <img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" alt="">
+                </summary>
+                <div >
+                    <a class="link-summarry" href="#">Freshbooks Alternatives</a>
+                    <a class="link-summarry"  href="#">Quickbooks Alternatives</a>
+                    <a class="link-summarry"  href="#">Wave vs Quickbooks</a>
+                    <a class="link-summarry"  href="#">Xero vs Quickbooks</a>
+                    <a class="link-summarry"  href="#">Freshbooks vs Quickbooks</a>
+                </div>
+             </details>
+        </div>
+    </div>
+</div>
+</body>
+</html>

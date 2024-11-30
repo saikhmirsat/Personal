@@ -1,0 +1,144 @@
+
+        body{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        #topsection{
+            background-color: rgb(240, 240, 240);
+            padding: 30px;
+        }
+        #topsection>div{
+            margin: auto;
+            width: 70%;
+            line-height: 35px;
+        }
+        #topheading{
+            display: flex;
+            align-items: center;
+            height: 35px;
+        }
+
+        #topheading>h2 {
+            font-weight: 400;
+            font-size: 30px;
+            color: rgb(80, 78, 78)
+        }
+
+        #topheading>p {
+            margin-left: 30px;
+            border-left: 3px solid rgba(81, 81, 79, 0.801);
+            padding-left: 30px;
+            font-size: 22px;
+            color: rgba(81, 81, 79, 0.801);
+        }
+        input,select,button{
+            border: none;
+            padding: 10px 15px;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+        #input{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            background-color: #f53838;
+            color: white;
+            font-size: 16px;
+            padding: 8px 15px 8px 15px;
+            
+        }
+        button+button{
+            background-color: #04be5a;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+
+        #middlesection{
+            width: 70%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 45px;
+            margin-top: 30px;
+            font-size: large;
+        }
+        #container>div{
+            box-shadow: 1px 1px 3px rgba(192, 192, 192, 0.728);
+            border-radius: 10px 10px 10px 10px;
+        }
+        #container>div>div{
+            padding: 0 15px;
+            margin-top: -30px;
+        }
+        #container p{
+            text-align: left;
+        }
+        #container>div>img{
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        #discount{
+            position: relative;
+            bottom: 305px;
+            left : 12px;
+            background-color: rgba(219, 218, 213, 0.888);
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #title{
+            font-size: 20px;
+            color:gray;
+            margin: 15px 0;
+        }
+        #desc{
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        #container button{
+            margin-bottom: 40px;
+            position: relative;
+            left: -148px;
+            padding: 10px 20px;
+            font-weight: 700;
+        }
+        #bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        #logo img{
+            width: 40px;
+            margin: 7px;
+        }
+        #bottom>p{
+            color : rgb(242, 12, 12);
+            font-size: x-large;
+        }
+        #bottom>h4{
+            color : gray;
+            font-size: x-large;
+        }
+        #downad{
+            text-align: center;
+            background-color: rgba(195, 199, 210, 0.427);
+            margin-top: 30px;
+        }
+        #downad>img{
+            margin-top: 30px;
+        }
+        select{
+            color :gray
+        }
+
